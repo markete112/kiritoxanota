@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Quiz de Kirito</title>
+
+<style>
+
+body{
+    background:black;
+    color:white;
+    font-family:Arial;
+    text-align:center;
+}
+
+h1{
+    color:#00ffe1;
+}
+
+.quiz{
+    margin-top:30px;
+}
+
+button{
+    display:block;
+    margin:10px auto;
+    padding:15px;
+    width:300px;
+    font-size:16px;
+    background:#111;
+    color:white;
+    border:2px solid cyan;
+    border-radius:10px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:cyan;
+    color:black;
+}
+
+.resultado{
+    font-size:25px;
+    margin-top:20px;
+}
+
+.gatos{
+    margin-top:40px;
+}
+
+.gatos img{
+    width:250px;
+    margin:10px;
+    border-radius:15px;
+    box-shadow:0 0 20px cyan;
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>Quiz: ¿Qué frase dijo Kirito?</h1>
+
+<div class="quiz">
+
+<p>Elige la frase correcta:</p>
+
+<button onclick="respuesta(false)">
+"Voy a hackear este servidor con mi katana digital"
+</button>
+
+<button onclick="respuesta(true)">
+"Prefiero seguir avanzando antes que quedarme parado."
+</button>
+
+<button onclick="respuesta(false)">
+"Los gatos blancos controlan el destino del mundo."
+</button>
+
+<button onclick="respuesta(false)">
+"Mi poder aumenta cada vez que como ramen."
+</button>
+
+</div>
+
+<div class="resultado" id="resultado"></div>
+
+<div class="gatos">
+
+<h2>Gatas blancas peludas</h2>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/0/0b/White_cat_sitting.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/White_cat.jpg">
+<img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/White_cat_portrait.jpg">
+
+</div>
+
+<script>
+
+function respuesta(correcta){
+
+let resultado = document.getElementById("resultado")
+
+if(correcta){
+resultado.innerHTML = "✅ Correcto! Kirito estaría orgulloso."
+}else{
+resultado.innerHTML = "❌ Incorrecto. Esa frase es inventada."
+}
+
+}
+
+</script>
+
+</body>
+</html>
